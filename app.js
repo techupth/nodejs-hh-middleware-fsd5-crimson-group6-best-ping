@@ -6,6 +6,8 @@ const app = express();
 const port = 4000;
 
 app.use(bodyParser.json());
+app.use(loggingMiddleware);
+
 app.use("/assignments", assignmentRouter);
 
 app.listen(port, () => {
